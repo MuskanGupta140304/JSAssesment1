@@ -40,9 +40,9 @@ function getTotalSupply() {
 }
 
 // Call your functions below this line
-mintNFT("Digital Artwork #1", "John Doe", "A beautiful piece of digital art.");
-mintNFT("Digital Artwork #2", "Jane Smith", "A stunning abstract creation.");
-mintNFT("Digital Artwork #3", "Alice Johnson", "A mesmerizing landscape.");
+mintNFT("Digital Artwork #1", "Muskan", "A beautiful piece of digital art.");
+mintNFT("Digital Artwork #2", "Jatin", "A stunning abstract creation.");
+mintNFT("Digital Artwork #3", "Aliya", "A mesmerizing landscape.");
 
 console.log("List of all NFTs:");
 listNFTs();
