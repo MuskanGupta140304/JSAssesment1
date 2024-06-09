@@ -2,52 +2,48 @@
 Assessment Requirements
 1. Create a variable that can hold a number of NFTs. What type of variable might this be?
 2. Create an object inside your mintNFT function that will hold the metadata for your NFTs. 
-   The metadata values will be passed to the function as parameters. When the NFT is ready, 
-   you will store it in the variable you created in step 1
+The metadata values will be passed to the function as parameters. When the NFT is ready, 
+you will store it in the variable you created in step 1
 3. Your listNFTs() function will print all of your NFTs metadata to the console (i.e. console.log("Name: " + someNFT.name))
 4. For good measure, getTotalSupply() should return the number of NFTs you have created
 */
 
-// Step 1: Create a variable to hold your NFTs
-let nftCollection = [];
+        // Step 1: Create a variable to hold a number of NFTs
+        let nftCollection = [];
 
-// Step 2: This function will take in some values as parameters, create an
-// NFT object using the parameters passed to it for its metadata, 
-// and store it in the variable above.
-function mintNFT(name, artist, description) {
-    const nft = {
+        // Step 2: Create the mintNFT function
+        function mintNFT(name, artist, description) {
+        let nft = {
         name: name,
         artist: artist,
         description: description
-    };
-    nftCollection.push(nft);
-}
+        };
+        nftCollection.push(nft);
+        }
 
-// Step 3: Create a "loop" that will go through an "array" of NFTs
-// and print their metadata with console.log()
-function listNFTs() {
-    for (let i = 0; i < nftCollection.length; i++) {
-        console.log(`NFT ${i + 1}:`);
-        console.log(`  Name: ${nftCollection[i].name}`);
-        console.log(`  Artist: ${nftCollection[i].artist}`);
-        console.log(`  Description: ${nftCollection[i].description}`);
-    }
-}
+        // Step 3: Create the listNFTs function
+        function listNFTs() {
+        nftCollection.forEach((nft, index) => {
+        console.log(`NFT ${index + 1}:`);
+        console.log(`  Name: ${nft.name}`);
+        console.log(`  Artist: ${nft.artist}`);
+        console.log(`  Description: ${nft.description}`);
+        });
+        }
 
-// Step 4: Print the total number of NFTs we have minted to the console
-function getTotalSupply() {
-    return nftCollection.length;
-}
+        // Step 4: Create the getTotalSupply function
+        function getTotalSupply() {
+        return nftCollection.length;
+        }
 
-// Call your functions below this line
-mintNFT("Digital Artwork #1", "Muskan", "A beautiful piece of digital art.");
-mintNFT("Digital Artwork #2", "Jatin", "A stunning abstract creation.");
-mintNFT("Digital Artwork #3", "Aliya", "A mesmerizing landscape.");
+        // Mint some NFTs
+        mintNFT("Digital Artwork #1", "Muskan", "A beautiful piece of digital art.");
+        mintNFT("Digital Artwork #2", "Jatin", "A stunning abstract creation.");
+        mintNFT("Digital Artwork #3", "Aliya", "A mesmerizing landscape.");
 
-console.log("List of all NFTs:");
-listNFTs();
+        // List all NFTs
+        console.log("List of all NFTs:");
+        listNFTs();
 
-console.log(`Total Supply: ${getTotalSupply()}`);nftScript.js;
-
-
-
+        // Print the total supply of NFTs
+        console.log(`Total Supply: ${getTotalSupply()}`);
